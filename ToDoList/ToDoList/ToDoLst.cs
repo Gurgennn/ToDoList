@@ -5,9 +5,9 @@ namespace ToDoList
 {
     public class ToDoLst
     {
-        private List<string> todos;
+        private List<Task> todos;
 
-        public ToDoLst(List<string> todos)
+        public ToDoLst(List<Task> todos)
         {
             this.todos = todos;
         }
