@@ -13,6 +13,7 @@ namespace ToDoList
         }
         public ToDoLst()
         {
+            todos = new List<Task>();
         }
         public void Add(Task task)
         {
