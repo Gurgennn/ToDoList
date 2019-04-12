@@ -9,6 +9,10 @@ namespace ToDoList
 
         public ToDoLst(List<Task> todos)
         {
+            if (todos == null)
+            {
+                throw new Exception("Invalid value");
+            }
             this.todos = todos;
         }
         public ToDoLst()
@@ -33,7 +37,7 @@ namespace ToDoList
         }
         public void Complete(int i)
         {
-            todos[i].Completeted = true;
+            todos[i].Completed = true;
         }
         public void CompleteAll(Predicate<Task> match)
         {
@@ -42,9 +46,9 @@ namespace ToDoList
 
                 if (match(todos[i]) == true)
                 {
-                    todos[i].Completeted = true;
+                    todos[i].Completed = true;
                 }
-                
+
             }
         }
     }

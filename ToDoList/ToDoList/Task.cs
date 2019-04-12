@@ -6,19 +6,19 @@ namespace ToDoList
 {
     public class Task
     {
-        private string taskdesc;
-        private bool completeted;
-
-        public bool Completeted { get => completeted; set => completeted = value; }
-
-        public Task(string taskdesc, bool completeted)
-        {
-            this.taskdesc = taskdesc;
-            this.Completeted = completeted;
-        }
+        private string _taskDesc;
+        private bool completed;
         public Task()
         {
         }
-        
+        public bool Completed { get;  set; }
+
+        public Task(string taskdesc, bool completeted)
+        {
+            _taskDesc = taskdesc;
+            this.Completed = completeted;
+        }
+
+
     }
 }
